@@ -22,7 +22,8 @@
    Key observation is that fully connected layers in classification networks can be viewed as convolutions with kernels that cover their entire input regions. This is equivalent to evaluating the original classification network on overlapping input patches but is much more efficient because computation is shared over the overlapping regions of patches. Although this observation is not unique to this paper (see [overfeat](https://arxiv.org/abs/1312.6229), [this post](https://plus.google.com/+PierreSermanet/posts/VngsFR3tug9)), it improved the state of the art on VOC2012 significantly.
 
    ![FCN architecture](http://blog.qure.ai/assets/images/segmentation-review/FCN%20-%20illustration.png)
-   Fully connected layers as a convolution. [Source](https://arxiv.org/abs/1411.4038).
+
+   ​												Fully connected layers as a convolution. [Source](https://arxiv.org/abs/1411.4038).
 
    After convolutionalizing fully connected layers in a imagenet pretrained network like VGG, feature maps still need to be upsampled because of pooling operations in CNNs. Instead of using simple bilinear interpolation, *deconvolutional layers* can learn the interpolation. This layer is also known as upconvolution, full convolution, transposed convolution or fractionally-strided convolution.
 
