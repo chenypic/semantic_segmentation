@@ -32,9 +32,13 @@ FCN对图像进行像素级的分类，从而解决了语义级别的图像分�
 
 这个上采样是通过反卷积（deconvolution）实现的。对第5层的输出（32倍放大）反卷积到原图大小，得到的结果还是不够精确，一些细节无法恢复。于是Jonathan将第4层的输出和第3层的输出也依次反卷积，分别需要16倍和8倍上采样，结果就精细一些了。下图是这个卷积和反卷积上采样的过程： 
 
+![](https://raw.githubusercontent.com/chenypic/semantic_segmentation/master/image/FCN_3.png)
 
 
 
+下图是32倍，16倍和8倍上采样得到的结果的对比，可以看到它们得到的结果越来越精确： 
+
+![](http://img.blog.csdn.net/20160514051844834)
 
 
 
